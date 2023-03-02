@@ -1,0 +1,173 @@
+{
+	"collection": {
+		"info": {
+			"_postman_id": "643ab686-ea1a-4e27-a3a8-cd013d14a3df",
+			"name": "WK_Teste",
+			"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+			"updatedAt": "2023-03-01T17:26:40.000Z"
+		},
+		"item": [
+			{
+				"name": "Selecao",
+				"id": "8487ee36-129b-495a-8c57-4652d632b6e3",
+				"protocolProfileBehavior": {
+					"disableBodyPruning": true
+				},
+				"request": {
+					"method": "GET",
+					"header": [],
+					"url": {
+						"raw": "http://localhost:8080/datasnap/rest/TsmGeral/Selecao/Filtro",
+						"protocol": "http",
+						"host": [
+							"localhost"
+						],
+						"port": "8080",
+						"path": [
+							"datasnap",
+							"rest",
+							"TsmGeral",
+							"Selecao",
+							"Filtro"
+						]
+					}
+				},
+				"response": []
+			},
+			{
+				"name": "Atualizar Endereço",
+				"id": "e7796318-3001-4605-bbe2-4ec01e67e620",
+				"protocolProfileBehavior": {
+					"disableBodyPruning": true
+				},
+				"request": {
+					"method": "GET",
+					"header": [],
+					"body": {
+						"mode": "raw",
+						"raw": "",
+						"options": {
+							"raw": {
+								"language": "json"
+							}
+						}
+					},
+					"url": {
+						"raw": "http://localhost:8080/datasnap/rest/TsmGeral/AtualizarEndereco/5/37044090",
+						"protocol": "http",
+						"host": [
+							"localhost"
+						],
+						"port": "8080",
+						"path": [
+							"datasnap",
+							"rest",
+							"TsmGeral",
+							"AtualizarEndereco",
+							"5",
+							"37044090"
+						]
+					}
+				},
+				"response": []
+			},
+			{
+				"name": "Excluir",
+				"id": "234ddb35-6578-4e42-ad72-8913599c54aa",
+				"protocolProfileBehavior": {
+					"disableBodyPruning": true
+				},
+				"request": {
+					"method": "DELETE",
+					"header": [],
+					"url": {
+						"raw": "http://localhost:8080/datasnap/rest/TsmGeral/Excluir/2",
+						"protocol": "http",
+						"host": [
+							"localhost"
+						],
+						"port": "8080",
+						"path": [
+							"datasnap",
+							"rest",
+							"TsmGeral",
+							"Excluir",
+							"2"
+						]
+					}
+				},
+				"response": []
+			},
+			{
+				"name": "Inserir",
+				"id": "9fba1928-7ff3-4795-875a-a7d6a3fad75d",
+				"protocolProfileBehavior": {
+					"disableBodyPruning": true
+				},
+				"request": {
+					"method": "POST",
+					"header": [],
+					"body": {
+						"mode": "raw",
+						"raw": "\r\n\t{\r\n\t\t\"Idpessoa\": 0,\r\n\t\t\"Primeironome\": \"MARCIO\",\r\n\t\t\"Segundonome\": \"SILVA\",\r\n\t\t\"Natureza\": \"1\",\r\n        \"Documento\": \"12345678911\",\r\n\t\t\"Cep\": \"337044090\"\r\n\t}",
+						"options": {
+							"raw": {
+								"language": "json"
+							}
+						}
+					},
+					"url": {
+						"raw": "http://localhost:8080/datasnap/rest/TsmGeral/Inserir",
+						"protocol": "http",
+						"host": [
+							"localhost"
+						],
+						"port": "8080",
+						"path": [
+							"datasnap",
+							"rest",
+							"TsmGeral",
+							"Inserir"
+						]
+					}
+				},
+				"response": []
+			},
+			{
+				"name": "Editar",
+				"id": "b1a7531b-a579-420b-aa0d-8dd0cd1f068f",
+				"protocolProfileBehavior": {
+					"disableBodyPruning": true
+				},
+				"request": {
+					"method": "PUT",
+					"header": [],
+					"body": {
+						"mode": "raw",
+						"raw": "{\r\n    \"Idpessoa\": 11,\r\n    \"Primeironome\": \"PEDRO\",\r\n    \"Segundonome\": \"BRAGANCA\",\r\n    \"Natureza\": \"2\",\r\n    \"Documento\": \"99988877766\",\r\n    \"Cep\": \"37044010\"\r\n}\r\n",
+						"options": {
+							"raw": {
+								"language": "json"
+							}
+						}
+					},
+					"url": {
+						"raw": "http://localhost:8080/datasnap/rest/TsmGeral/Editar",
+						"protocol": "http",
+						"host": [
+							"localhost"
+						],
+						"port": "8080",
+						"path": [
+							"datasnap",
+							"rest",
+							"TsmGeral",
+							"Editar"
+						]
+					}
+				},
+				"response": []
+			}
+		]
+	}
+}
