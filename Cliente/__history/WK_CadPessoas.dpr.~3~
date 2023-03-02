@@ -1,0 +1,19 @@
+program WK_CadPessoas;
+
+uses
+  Vcl.Forms,
+  View.Principal in 'View\View.Principal.pas' {frmPrincipal},
+  View.DadosImport in 'View\View.DadosImport.pas' {frmDadosImport},
+  Dm.Imagens in 'DataModules\Dm.Imagens.pas' {dmImagens: TDataModule},
+  Dm.Dados in 'DataModules\Dm.Dados.pas' {dm: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(Tdm, dm);
+  Application.CreateForm(TdmImagens, dmImagens);
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.Run;
+end.

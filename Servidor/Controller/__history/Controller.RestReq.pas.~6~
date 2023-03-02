@@ -1,0 +1,21 @@
+unit Controller.RestReq;
+
+interface
+
+uses
+  Pkg.Json.DTO, System.Generics.Collections, REST.Json.Types;
+
+type
+  TRequisicaoRest = class
+  public
+    FCodHttp: Integer;
+    FResposta: String;
+    function RESTReqHTTP(sBaseURL, sBody, jsParametros: String; rmMetodo: TRESTRequestMethod; var CodHttp: Integer): String;
+  published
+    property CodHttp: Integer read FCodHttp write FCodHttp;
+    property Resposta: String read FResposta write FResposta;
+  end;
+
+implementation
+
+end.

@@ -1,0 +1,19 @@
+unit DAO.Conexao;
+
+interface
+
+type
+  IQuery = interface;
+
+  IConexao = interface
+    function Connection: TObject;
+  end;
+
+  IConexaoFactory = interface
+    function Conexao: TObject;
+    function Query: TObject;
+  end;
+
+implementation
+
+end.

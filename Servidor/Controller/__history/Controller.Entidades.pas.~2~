@@ -1,0 +1,10 @@
+unit Controller.Entidades;
+
+interface
+
+type
+  TController = class(TInterfacedObject,IController);
+
+implementation
+
+end.

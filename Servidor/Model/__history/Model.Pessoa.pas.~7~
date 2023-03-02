@@ -1,0 +1,64 @@
+unit Model.Pessoa;
+
+interface
+
+uses
+  Pkg.Json.DTO, System.Generics.Collections, REST.Json.Types;
+
+{$M+}
+
+type
+  TItems = class
+  private
+    FCep: string;
+    FDocumento: string;
+    FIdpessoa: Integer;
+    FNatureza: Double;
+    FPrimeironome: string;
+    FSegundonome: string;
+  published
+    property Cep: string read FCep write FCep;
+    property Documento: string read FDocumento write FDocumento;
+    property Idpessoa: Integer read FIdpessoa write FIdpessoa;
+    property Natureza: Double read FNatureza write FNatureza;
+    property Primeironome: string read FPrimeironome write FPrimeironome;
+    property Segundonome: string read FSegundonome write FSegundonome;
+  end;
+
+  TRoot = class(TJsonDTO)
+  private
+    [JSONName('Items'), JSONMarshalled(False)]
+    FItemsArray: TArray<TItems>;
+    [GenericListReflect]
+    FItems: TObjectList<TItems>;
+    function GetItems: TObjectList<TItems>;
+  protected
+    function GetAsJson: string; override;
+  published
+    property Items: TObjectList<TItems> read GetItems;
+  public
+    destructor Destroy; override;
+  end;
+
+implementation
+
+{ TRoot }
+
+destructor TRoot.Destroy;
+begin
+  GetItems.Free;
+  inherited;
+end;
+
+function TRoot.GetItems: TObjectList<TItems>;
+begin
+  Result := ObjectList<TItems>(FItems, FItemsArray);
+end;
+
+function TRoot.GetAsJson: string;
+begin
+  RefreshArray<TItems>(FItems, FItemsArray);
+  Result := inherited;
+end;
+
+end.

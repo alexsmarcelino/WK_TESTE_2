@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/07/11 19:07:15.000.569,=C:\Users\alexs\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/01/25 20:05:14.000.546,=C:\Users\alexs\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/02/23 16:49:39.000.675,=C:\Users\alexs\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/02/27 19:25:11.000.488,=C:\Users\alexs\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/02/27 19:41:18.000.364,=C:\Users\alexs\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2023/02/27 19:44:31.000.007,C:\Alexs\WK_TESTE\Cliente\View\View.Principal.dfm=C:\Users\alexs\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2023/02/27 19:44:31.000.007,C:\Alexs\WK_TESTE\Cliente\View\View.Principal.pas=C:\Users\alexs\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/02/27 19:44:44.000.815,=C:\Users\alexs\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/02/27 19:45:26.000.473,C:\Alexs\WK_TESTE\Cliente\View\View.DadosImport.dfm=C:\Users\alexs\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2023/02/27 19:45:26.000.473,C:\Alexs\WK_TESTE\Cliente\View\View.DadosImport.pas=C:\Users\alexs\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/02/27 19:48:02.000.532,C:\Alexs\WK_TESTE\Cliente\DataModules\udmImagens.dfm=C:\Users\alexs\Documents\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>2023/02/27 19:48:02.000.532,C:\Alexs\WK_TESTE\Cliente\DataModules\udmImagens.pas=C:\Users\alexs\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2023/02/27 19:51:57.000.419,C:\Alexs\WK_TESTE\Cliente\DataModules\Dm.Imagens.pas=C:\Alexs\WK_TESTE\Cliente\DataModules\udmImagens.pas</Transaction>
+    <Transaction>2023/02/27 19:51:57.000.419,C:\Alexs\WK_TESTE\Cliente\DataModules\Dm.Imagens.dfm=C:\Alexs\WK_TESTE\Cliente\DataModules\udmImagens.dfm</Transaction>
+    <Transaction>2023/02/27 21:18:06.000.630,C:\Alexs\WK_TESTE\Cliente\DataModules\Dm.Imagens.pas=</Transaction>
+    <Transaction>2023/02/27 21:18:33.000.001,=C:\Alexs\WK_TESTE\Cliente\DataModules\Dm.Imagens.pas</Transaction>
+    <Transaction>2023/02/27 21:21:13.000.401,C:\Alexs\WK_TESTE\Cliente\WK_CadPessoas.dproj=C:\Users\alexs\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2023/03/01 17:31:47.996,=C:\Alexs\WK_TESTE\Cliente\Unit1.pas</Transaction>
+    <Transaction>2023/03/01 17:32:13.431,C:\Alexs\WK_TESTE\Cliente\DataModules\Dm.Dados.pas=C:\Alexs\WK_TESTE\Cliente\Unit1.pas</Transaction>
+    <Transaction>2023/03/01 17:32:13.431,C:\Alexs\WK_TESTE\Cliente\DataModules\Dm.Dados.dfm=C:\Alexs\WK_TESTE\Cliente\Unit1.dfm</Transaction>
+    <Transaction>2023/03/01 17:42:15.009,=C:\Alexs\WK_TESTE\Cliente\Unit1.pas</Transaction>
+    <Transaction>2023/03/01 17:42:25.842,C:\Alexs\WK_TESTE\Cliente\Controller\Controller.Crud.pas=C:\Alexs\WK_TESTE\Cliente\Unit1.pas</Transaction>
+    <Transaction>2023/03/01 18:54:28.435,=C:\Alexs\WK_TESTE\Cliente\Unit1.pas</Transaction>
+    <Transaction>2023/03/01 18:55:12.497,C:\Alexs\WK_TESTE\Cliente\View\View.Crud.pas=C:\Alexs\WK_TESTE\Cliente\Unit1.pas</Transaction>
+    <Transaction>2023/03/01 18:55:12.497,C:\Alexs\WK_TESTE\Cliente\View\View.Crud.dfm=C:\Alexs\WK_TESTE\Cliente\Unit1.dfm</Transaction>
+    <Transaction>2023/03/01 18:56:12.181,C:\Alexs\WK_TESTE\Cliente\View\View.Manutencao.dfm=C:\Alexs\WK_TESTE\Cliente\View\View.Crud.dfm</Transaction>
+    <Transaction>2023/03/01 18:56:12.181,C:\Alexs\WK_TESTE\Cliente\View\View.Manutencao.pas=C:\Alexs\WK_TESTE\Cliente\View\View.Crud.pas</Transaction>
+    <Transaction>2023/03/01 19:52:21.668,=C:\Alexs\WK_TESTE\Servidor\Model\Model.Pessoa.pas</Transaction>
+    <Transaction>2023/03/01 19:52:34.904,=C:\Alexs\WK_TESTE\Comum\Pkg.Json.DTO.pas</Transaction>
+    <Transaction>2023/03/01 20:21:17.318,C:\Alexs\WK_TESTE\Servidor\Model\Model.Pessoa.pas=</Transaction>
+  </Transactions>
+</BorlandProject>

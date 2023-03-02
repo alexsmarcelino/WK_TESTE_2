@@ -1,0 +1,47 @@
+unit Model.Pessoa;
+
+interface
+
+type
+  TPessoa = class
+  private
+    FIdPessoa: Integer;
+    FPrimeiroNome: String;
+    FSegundoNome: String;
+    FNatureza: Double;
+    procedure SetIdPessoa(const Value: Integer);
+    procedure SetPrimeiroNome(const Value: String);
+    procedure SetSegundoNome(const Value: String);
+    procedure SetNatureza(const Value: Double);
+  public
+    property IdPessoa: Integer read FIdPessoa write SetIdPessoa;
+    property PrimeiroNome: String read FPrimeiroNome write SetPrimeiroNome;
+    property SegundoNome: String read FSegundoNome write SetSegundoNome;
+    property Natureza: Double read FNatureza write SetNatureza;
+  end;
+
+implementation
+
+{ TPessoa }
+
+procedure TPessoa.SetIdPessoa(const Value: Integer);
+begin
+  FIdPessoa := Value;
+end;
+
+procedure TPessoa.SetNatureza(const Value: Double);
+begin
+  FNatureza := Value;
+end;
+
+procedure TPessoa.SetPrimeiroNome(const Value: String);
+begin
+  FPrimeiroNome := Value;
+end;
+
+procedure TPessoa.SetSegundoNome(const Value: String);
+begin
+  FSegundoNome := Value;
+end;
+
+end.

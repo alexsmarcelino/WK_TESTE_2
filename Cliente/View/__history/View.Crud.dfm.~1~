@@ -1,0 +1,43 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 442
+  ClientWidth = 628
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+  object Panel1: TPanel
+    AlignWithMargins = True
+    Left = 10
+    Top = 10
+    Width = 64
+    Height = 422
+    Margins.Left = 10
+    Margins.Top = 10
+    Margins.Right = 10
+    Margins.Bottom = 10
+    Align = alLeft
+    BevelOuter = bvNone
+    Caption = 'Panel1'
+    Color = clSilver
+    ParentBackground = False
+    ShowCaption = False
+    TabOrder = 0
+    ExplicitTop = -99
+    ExplicitHeight = 541
+    object imgIcone: TImage
+      Left = 0
+      Top = 0
+      Width = 64
+      Height = 64
+      Align = alTop
+      Center = True
+      ExplicitTop = 24
+    end
+  end
+end

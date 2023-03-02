@@ -1,0 +1,3 @@
+Nome do banco PostreSQL: wk_teste
+Usuário: postgres
+Senha: postgres

@@ -1,0 +1,37 @@
+unit DAO.Conexao;
+
+interface
+
+uses
+  SysInit;
+
+type
+  IQuery = interface;
+
+  IConexao = interface
+    function Connection: TObject;
+  end;
+
+  IConexaoFactory = interface
+    function Conexao: IConexao;
+    function Query: IQuery;
+  end;
+
+  IQuery = interface
+    function Query: TObject;
+    function Open(aSQL: String): IQuery:
+    function ExecSQL(aSQL: String): IQuery;
+  end;
+
+  IEntidade = interface
+    function DataSet(aValue: TDataSource): IEntidade;
+    procedure Open;
+  end;
+
+  IEntidadeFactory = interface
+    function Produto: IEntidade;
+  end;
+
+implementation
+
+end.

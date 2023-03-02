@@ -1,0 +1,63 @@
+unit DAO.Query;
+
+interface
+
+uses
+  DAO.Conexao, Data.DB, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Error,
+  FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool,
+  FireDAC.Stan.Async, FireDAC.Phys, FireDAC.VCLUI.Wait, FireDAC.Comp.Client;
+
+type
+  IFireDacQuery = class(TInterfacedObject,IQuery)
+  private
+    FQuery: TFDQuery;
+    FConexao: IConexao;
+  public
+    constructor Create(aValue: IConexao);
+    destructor Destroy; override;
+    class function New(aValue: IConexao): IQuery;
+    function Query: TObject;
+    function Open(aSQL: String): IQuery;
+    function ExecSQL(aSQL: String): IQuery;
+  end;
+
+implementation
+
+
+
+{ IFireDacQuery }
+
+constructor IFireDacQuery.Create(aValue: IConexao);
+begin
+  FConexao := aValue;
+  FQuery := TFDQuery.Create(Nil);
+  FQuery.Connection := TFDConnection(FConexao.Connection);
+end;
+
+destructor IFireDacQuery.Destroy;
+begin
+  FreeAndNil(FQuery);
+  inherited;
+end;
+
+function IFireDacQuery.ExecSQL(aSQL: String): IQuery;
+begin
+
+end;
+
+class function IFireDacQuery.New(aValue: IConexao): IQuery;
+begin
+
+end;
+
+function IFireDacQuery.Open(aSQL: String): IQuery;
+begin
+
+end;
+
+function IFireDacQuery.Query: TObject;
+begin
+
+end;
+
+end.

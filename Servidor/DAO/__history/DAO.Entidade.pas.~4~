@@ -1,0 +1,95 @@
+unit DAO.Entidade;
+
+interface
+
+uses
+  Data.DB, DAO.Conexao, DAO.ConexaoFactory;
+
+type
+  TEntidadePessoa = class(TInterfacedObject,IEntidade)
+  private
+    FQuery: IQuery;
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: IEntidade;
+    function DataSet(aValue: TDataSource): IEntidade;
+    procedure Open;
+  end;
+
+  TEntidadePessoaExcluir = class(TInterfacedObject,IQuery)
+  private
+    FQuery: IQuery;
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: IQuery;
+    function Query: TObject;
+    function Open(aSQL: String): IQuery;
+    function ExecSQL(aSQL: String): IQuery;
+  end;
+
+
+implementation
+
+{ TEntidadeProduto }
+
+constructor TEntidadePessoa.Create;
+begin
+  FQuery := TConexaoFactory.New.Query;
+end;
+
+function TEntidadePessoa.DataSet(aValue: TDataSource): IEntidade;
+begin
+  Result := Self;
+  aValue.DataSet := TDataSet(FQuery.Query);
+end;
+
+destructor TEntidadePessoa.Destroy;
+begin
+  inherited;
+end;
+
+class function TEntidadePessoa.New: IEntidade;
+begin
+  Result := Self.Create;
+end;
+
+procedure TEntidadePessoa.Open;
+begin
+  FQuery.Open('SELECT * FROM PESSOA')
+end;
+
+{ TEntidadePessoaExcluir }
+
+constructor TEntidadePessoaExcluir.Create;
+begin
+  FQuery := TConexaoFactory.New.Query;
+end;
+
+destructor TEntidadePessoaExcluir.Destroy;
+begin
+  inherited;
+end;
+
+function TEntidadePessoaExcluir.ExecSQL(aSQL: String): IQuery;
+begin
+  FQuery.Open('DELETE FROM PESSOA P WHERE P.IDPESSOA = 2');
+end;
+
+class function TEntidadePessoaExcluir.New: IQuery;
+begin
+  Result := Self.Create;
+end;
+
+function TEntidadePessoaExcluir.Open(aSQL: String): IQuery;
+begin
+
+end;
+
+function TEntidadePessoaExcluir.Query: TObject;
+begin
+
+end;
+
+end.

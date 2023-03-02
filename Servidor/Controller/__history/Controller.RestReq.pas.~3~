@@ -1,0 +1,20 @@
+unit Controller.RestReq;
+
+interface
+
+uses
+  Pkg.Json.DTO, System.Generics.Collections, REST.Json.Types;
+
+type
+  TRequisicaoRest = class
+  public
+    FCodHttp: Integer;
+    FResposta: String;
+  private
+    property CodHttp: Integer read FCodHttp write FCodHttp;
+    property FResposta: string read FResposta write FResposta;
+  end;
+
+implementation
+
+end.

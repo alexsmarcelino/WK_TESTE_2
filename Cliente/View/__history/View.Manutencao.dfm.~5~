@@ -1,0 +1,103 @@
+object frmManutencao: TfrmManutencao
+  Left = 0
+  Top = 0
+  Caption = 'Cadastro de Pessoas - Manuten'#231#227'o'
+  ClientHeight = 442
+  ClientWidth = 628
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  Position = poScreenCenter
+  OnCreate = FormCreate
+  TextHeight = 15
+  object Panel1: TPanel
+    AlignWithMargins = True
+    Left = 10
+    Top = 10
+    Width = 64
+    Height = 422
+    Margins.Left = 10
+    Margins.Top = 10
+    Margins.Right = 10
+    Margins.Bottom = 10
+    Align = alLeft
+    BevelOuter = bvNone
+    Caption = 'Panel1'
+    Color = clSilver
+    ParentBackground = False
+    ShowCaption = False
+    TabOrder = 0
+    ExplicitTop = -99
+    ExplicitHeight = 541
+    object imgIcone: TImage
+      Left = 0
+      Top = 0
+      Width = 64
+      Height = 64
+      Align = alTop
+      Center = True
+      ExplicitTop = 24
+    end
+  end
+  object pnlPrincipal: TPanel
+    Left = 84
+    Top = 0
+    Width = 544
+    Height = 442
+    Align = alClient
+    BevelOuter = bvNone
+    ShowCaption = False
+    TabOrder = 1
+    ExplicitLeft = -72
+    ExplicitTop = -119
+    ExplicitWidth = 700
+    ExplicitHeight = 561
+    object ToolBar1: TToolBar
+      AlignWithMargins = True
+      Left = 10
+      Top = 10
+      Width = 524
+      Height = 55
+      Margins.Left = 10
+      Margins.Top = 10
+      Margins.Right = 10
+      Margins.Bottom = 0
+      ButtonHeight = 54
+      ButtonWidth = 53
+      Caption = 'ToolBar1'
+      DisabledImages = dmImagens.img32d
+      Images = dmImagens.img32
+      ShowCaptions = True
+      TabOrder = 0
+      ExplicitLeft = 18
+      ExplicitTop = 18
+      object ToolButton4: TToolButton
+        Left = 0
+        Top = 0
+        Action = dmDados.acSalvar
+      end
+      object ToolButton5: TToolButton
+        Left = 53
+        Top = 0
+        Action = dmDados.acCancelar
+      end
+    end
+    object pnlCrud: TPanel
+      Left = 0
+      Top = 65
+      Width = 544
+      Height = 377
+      Align = alClient
+      BevelOuter = bvNone
+      ShowCaption = False
+      TabOrder = 1
+      ExplicitLeft = 184
+      ExplicitTop = 200
+      ExplicitWidth = 185
+      ExplicitHeight = 41
+    end
+  end
+end

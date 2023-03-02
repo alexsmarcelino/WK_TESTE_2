@@ -1,0 +1,15 @@
+object dmImagens: TdmImagens
+  OldCreateOrder = False
+  Height = 86
+  Width = 175
+  object img32: TImageList
+    Left = 32
+    Top = 24
+  end
+  object img48: TImageList
+    Height = 48
+    Width = 48
+    Left = 104
+    Top = 24
+  end
+end

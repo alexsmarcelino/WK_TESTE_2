@@ -1,0 +1,82 @@
+unit View.Principal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes,
+  Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ToolWin, Vcl.ComCtrls,
+  System.Actions, Vcl.ActnList, Data.DB, Vcl.Grids, Vcl.DBGrids, Vcl.ExtCtrls,
+  Datasnap.DBClient, Datasnap.Provider, MidasLib, Dm.Dados;
+
+type
+
+  TfrmPrincipal = class(TForm)
+    ToolBar1: TToolBar;
+    pcPessoas: TPageControl;
+    tsListagem: TTabSheet;
+    pngDados: TPanel;
+    dbgDados: TDBGrid;
+    ToolButton1: TToolButton;
+    ToolButton2: TToolButton;
+    ToolButton3: TToolButton;
+    ToolButton6: TToolButton;
+    ToolButton7: TToolButton;
+    ToolButton8: TToolButton;
+    ToolButton9: TToolButton;
+    ToolButton10: TToolButton;
+    ToolButton11: TToolButton;
+    ToolButton4: TToolButton;
+    ToolButton5: TToolButton;
+    procedure acIncluirExecute(Sender: TObject);
+    procedure acImportarExecute(Sender: TObject);
+    procedure acPrimeiroExecute(Sender: TObject);
+    procedure acProximoExecute(Sender: TObject);
+    procedure dbgDadosDblClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPrincipal: TfrmPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+uses Dm.Imagens, View.DadosImport, View.Manutencao;
+
+procedure TfrmPrincipal.acImportarExecute(Sender: TObject);
+begin
+  try
+    frmDadosImport := TfrmDadosImport.Create(Self);
+    frmDadosImport.ShowModal;
+  finally
+    FreeAndNil(frmDadosImport);
+  end;
+end;
+
+procedure TfrmPrincipal.acIncluirExecute(Sender: TObject);
+begin
+  showmessage('Em desenvolvimento');
+end;
+
+procedure TfrmPrincipal.acPrimeiroExecute(Sender: TObject);
+begin
+  dmDados.cdsDados.First;
+end;
+
+procedure TfrmPrincipal.acProximoExecute(Sender: TObject);
+begin
+  dmDados.cdsDados.Next;
+end;
+
+procedure TfrmPrincipal.dbgDadosDblClick(Sender: TObject);
+begin
+   if dmDados.cdsDados.IsEmpty then
+     Abort;
+   dmDados.acEditarExecute(Self);
+end;
+
+end.

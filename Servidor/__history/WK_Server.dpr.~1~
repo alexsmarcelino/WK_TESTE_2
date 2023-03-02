@@ -1,0 +1,32 @@
+program WK_Server;
+{$APPTYPE GUI}
+
+{$R *.dres}
+
+uses
+  Vcl.Forms,
+  Web.WebReq,
+  IdHTTPWebBrokerBridge,
+  View.Principal in 'View\View.Principal.pas' {Form1},
+  Server.Methods in 'Server.Methods.pas' {smGeral: TDSServerModule},
+  Server.Container in 'Server.Container.pas' {ServerContainer1: TDataModule},
+  Web.Module in 'Web.Module.pas' {wmGeral: TWebModule},
+  DAO.Crud in 'DAO\DAO.Crud.pas',
+  DAO.Conexao in 'DAO\DAO.Conexao.pas',
+  DAO.ConFiredDAC in 'DAO\DAO.ConFiredDAC.pas',
+  DAO.Query in 'DAO\DAO.Query.pas',
+  DAO.ConexaoFactory in 'DAO\DAO.ConexaoFactory.pas',
+  DAO.Entidade in 'DAO\DAO.Entidade.pas',
+  DAO.EntidadeFactory in 'DAO\DAO.EntidadeFactory.pas',
+  Controller.Entidades in 'Controller\Controller.Entidades.pas',
+  Controller in 'C:\Users\alexs\Documents\Embarcadero\Studio\Projects\Project1\Controller.pas';
+
+{$R *.res}
+
+begin
+  if WebRequestHandler <> nil then
+    WebRequestHandler.WebModuleClass := WebModuleClass;
+  Application.Initialize;
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.

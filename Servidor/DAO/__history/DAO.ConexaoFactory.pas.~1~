@@ -1,0 +1,7 @@
+unit DAO.ConexaoFactory;
+
+interface
+
+implementation
+
+end.

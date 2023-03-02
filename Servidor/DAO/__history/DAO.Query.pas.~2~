@@ -1,0 +1,15 @@
+unit DAO.Query;
+
+interface
+
+uses
+  DAO.Conexao;
+
+type
+  IFireDacQuery = class(TInterfacedObject,IQuery);
+
+implementation
+
+
+
+end.

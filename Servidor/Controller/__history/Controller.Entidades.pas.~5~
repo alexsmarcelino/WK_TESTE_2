@@ -1,0 +1,17 @@
+unit Controller.Entidades;
+
+interface
+
+uses
+  Controller, DAO.Conexao;
+
+type
+  TController = class(TInterfacedObject,IController)
+  private
+    FEntidades: IEntidadeFactory;
+
+  end;
+
+implementation
+
+end.

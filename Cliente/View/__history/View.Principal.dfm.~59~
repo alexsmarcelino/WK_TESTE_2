@@ -1,0 +1,173 @@
+object frmPrincipal: TfrmPrincipal
+  Left = 0
+  Top = 0
+  Caption = 'Cadastro de Pessoas'
+  ClientHeight = 561
+  ClientWidth = 1051
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -13
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  WindowState = wsMaximized
+  TextHeight = 16
+  object ToolBar1: TToolBar
+    AlignWithMargins = True
+    Left = 10
+    Top = 10
+    Width = 1031
+    Height = 55
+    Margins.Left = 10
+    Margins.Top = 10
+    Margins.Right = 10
+    Margins.Bottom = 0
+    ButtonHeight = 55
+    ButtonWidth = 58
+    Caption = 'ToolBar1'
+    DisabledImages = dmImagens.img32d
+    Images = dmImagens.img32
+    ShowCaptions = True
+    TabOrder = 0
+    ExplicitWidth = 827
+    object ToolButton11: TToolButton
+      Left = 0
+      Top = 0
+      Cursor = crHandPoint
+      Action = dmDados.acConectar
+    end
+    object ToolButton1: TToolButton
+      Left = 58
+      Top = 0
+      Cursor = crHandPoint
+      Action = dmDados.acIncluir
+    end
+    object ToolButton3: TToolButton
+      Left = 116
+      Top = 0
+      Cursor = crHandPoint
+      Action = dmDados.acEditar
+    end
+    object ToolButton2: TToolButton
+      Left = 174
+      Top = 0
+      Cursor = crHandPoint
+      Action = dmDados.acExcluir
+    end
+    object ToolButton6: TToolButton
+      Left = 232
+      Top = 0
+      Cursor = crHandPoint
+      Hint = 'Primeiro registro'
+      Caption = 'Primeiro'
+      Enabled = False
+      ImageIndex = 6
+      OnClick = acPrimeiroExecute
+    end
+    object ToolButton7: TToolButton
+      Left = 290
+      Top = 0
+      Cursor = crHandPoint
+      Hint = 'Registro anterior'
+      Caption = 'Anterior'
+      Enabled = False
+      ImageIndex = 5
+    end
+    object ToolButton8: TToolButton
+      Left = 348
+      Top = 0
+      Cursor = crHandPoint
+      Hint = 'Pr'#243'ximo registro'
+      Caption = 'Pr'#243'ximo'
+      Enabled = False
+      ImageIndex = 7
+      OnClick = acProximoExecute
+    end
+    object ToolButton9: TToolButton
+      Left = 406
+      Top = 0
+      Cursor = crHandPoint
+      Hint = #218'ltimo registro'
+      Caption = #218'ltimo'
+      Enabled = False
+      ImageIndex = 8
+    end
+    object ToolButton10: TToolButton
+      Left = 464
+      Top = 0
+      Cursor = crHandPoint
+      Hint = 'Importar dados a partir de arquivo CSV'
+      Caption = 'Importar'
+      Enabled = False
+      ImageIndex = 9
+      OnClick = acImportarExecute
+    end
+    object ToolButton5: TToolButton
+      Left = 522
+      Top = 0
+      Action = dmDados.acAtualizar
+    end
+    object ToolButton4: TToolButton
+      Left = 580
+      Top = 0
+      Action = dmDados.acViaCep
+      Enabled = False
+    end
+  end
+  object pcPessoas: TPageControl
+    AlignWithMargins = True
+    Left = 10
+    Top = 75
+    Width = 1031
+    Height = 476
+    Margins.Left = 10
+    Margins.Top = 10
+    Margins.Right = 10
+    Margins.Bottom = 10
+    ActivePage = tsListagem
+    Align = alClient
+    TabOrder = 1
+    Visible = False
+    object tsListagem: TTabSheet
+      Caption = '&Listagem  '
+      object pngDados: TPanel
+        Left = 0
+        Top = 0
+        Width = 1023
+        Height = 445
+        Align = alClient
+        BevelOuter = bvNone
+        ShowCaption = False
+        TabOrder = 0
+        ExplicitWidth = 819
+        ExplicitHeight = 444
+        object dbgDados: TDBGrid
+          AlignWithMargins = True
+          Left = 10
+          Top = 10
+          Width = 1003
+          Height = 425
+          Margins.Left = 10
+          Margins.Top = 10
+          Margins.Right = 10
+          Margins.Bottom = 10
+          Align = alClient
+          DataSource = dmDados.dsDados
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 0
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -13
+          TitleFont.Name = 'Tahoma'
+          TitleFont.Style = [fsBold]
+          OnDblClick = dbgDadosDblClick
+        end
+      end
+    end
+  end
+end
